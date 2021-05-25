@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <title>Pizza</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>
+            <h2>Vylaďte si svou pizzu:</h2>
+        </legend>
+        <div>
+            <h3>Vyberte pizzu:</h3>
+            
+            <input class="pizza" type="radio" id="herkulova" name="pizza" value="Herkulova - rajčata, oregano, eidam, herkules" data-price="140">
+            <!-- id se pouzije i v labelu - pak je label propojjeny s inputem -->
+            <label for="herkulova">Herkulova - rajčata, oregano, eidam, herkules</label><br> 
+            <!-- duvod labelu - asi muzu klikat i na label ne jen na male kolecko radio buttonu -->
+            <input type="radio" class="pizza" id="syrova" name="pizza" value="Sýrová - rajčata, oregano, eidam, niva, uzený sýr, hermelín, mozzarella" data-price="135">
+            <label for="syrova">Sýrová - rajčata, oregano, eidam, niva, uzený sýr, hermelín, mozzarella</label><br>
+            <input type="radio" class="pizza" id="extra-paliva" name="pizza" value="Extra pálivá - rajčata, oregano, eidam, ang.slan., klobása, chilli, feferony" data-price="150">
+            <label for="extra-paliva">Extra pálivá - rajčata, oregano, eidam, ang.slan., klobása, chilli, feferony</label><br>
+            <input type="radio" class="pizza" id="kureci" name="pizza" value="Kuřecí - rajčata, oregano, kuřecí maso, ang.slan., smetana, kukuřice, pórek" data-price="160">
+            <label for="kureci">Kuřecí - rajčata, oregano, kuřecí maso, ang.slan., smetana, kukuřice, pórek</label><br>
+            <input type="radio" class="pizza" id="zahradnikova" name="pizza" value="Zahradníkova - rajčata, oregano, pórek, hrášek, kukuřice, eidam, uz.sýr, olivy" data-price="145">
+            <label for="zahradnikova">Zahradníkova - rajčata, oregano, pórek, hrášek, kukuřice, eidam, uz.sýr, olivy
+            </label><br>
+            <input type="radio" class="pizza" id="pekelna" name="pizza" value="Pekelná - rajčata, oregano, fazole, anglická, klobása, feferony, chilli, česnek" data-price="155">
+            <label for="pekelna">Pekelná - rajčata, oregano, fazole, anglická, klobása, feferony, chilli, česnek
+            </label><br>
+            <input type="radio" class="pizza" id="sladka" name="pizza" value="Sladká - džem, ananas, smetana, čokoláda, cukr" data-price="130">
+            <label for="sladka">Sladká - džem, ananas, smetana, čokoláda, cukr</label><br>
+        </div>
+        <div>
+            <h3>Zadejte počet kusů:</h3>
+            <input type="number" name="pocet" id="pocet" value="1" min="1">
+        </div>
+        <div id="checkboxy">
+            <h3>Vyberte, co máme přidat</h3>
+            <!-- input type checkbox -->
+            <input type="checkbox" name="ingredience[]" class="ingredience-navic" id="kukurice" data-price="30" data-value="Kukuřice">
+            <!-- tady to id jako pole?? -->
+            <label for="kukurice">Kukuřice</label><br>
+            <input type="checkbox" name="ingredience[]" class="ingredience-navic" id="niva" data-price="45" data-value="Niva">
+            <label for="niva">Niva</label><br>
+            <input type="checkbox" name="ingredience[]" class="ingredience-navic"id="herkules" data-price="35" data-value="Herkules">
+            <label for="herkules">Herkules</label><br>
+            <input type="checkbox" name="ingredience[]" class="ingredience-navic" id="hermelin" data-price="40"data-value="Hermelín">
+            <label for="hermelin">Hermelín</label><br>
+            <input type="checkbox" name="ingredience[]"class="ingredience-navic" id="kure" data-price="45" data-value="Kuřecí">
+            <label for="kure">Kuřecí</label><br>
+            <input type="checkbox" name="ingredience[]" class="ingredience-navic" id="jalapenos" data-price="40" data-value="Jalapeňos">
+            <label for="jalapenos">Jalapeňos</label><br>
+        </div>
+        <div>
+            <h3>Vámi vybraná pizza:</h3>
+            <p id="pizza-shrnuti">Zatim zadna pizza</p>
+            <p id="pridano"></p>
+            <p id="pocet-kusu">Počet kusů:<span id="pizza-pocet">1</span></p>
+            <p id="za-pizzu">Cena:<span id="cena-za-pizzu">0</span> Kč</p>
+            <button id="pridej">Pridej</button>
+        </div>
+        <div id="kosik">
+
+        </div>
+        <div>
+            <h3>Shrnutí objednávky</h3>
+            <p id="objednavka-shrnuti">(zatím nemáte vybráno)</p>
+            <p id="celkem"><span id="cena-celkem">0</span> Kč</p>
+            <input type="submit" id="odeslat" value="Odeslat objednávku">
+        </div>
+
+    </fieldset>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

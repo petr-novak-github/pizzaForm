@@ -1,0 +1,17 @@
+body{
+    width: 80%;
+}
+#celkem{
+    font-size: 20pt;
+    font-weight: bold;
+}
+#pridej{
+    margin-top: 10px;
+}
+#odeslano{
+  color: green;
+}
+.kontrast{
+  background: black;
+  color: white;
+}
